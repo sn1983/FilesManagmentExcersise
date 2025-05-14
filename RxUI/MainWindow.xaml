@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RxUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="400">
+        Title="Service Rx Settings" Height="600" Width="400">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel Margin="10">
 
