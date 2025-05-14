@@ -3,25 +3,42 @@ using System.Diagnostics;
 
 public static class EventLogger
 {
-    public static void WriteToEventLog(string source, string message, EventLogEntryType type = EventLogEntryType.Information, string logName = "Application")
+    public static bool WriteToEventLog(
+        string source,
+        string message,
+        EventLogEntryType type = EventLogEntryType.Information,
+        string logName = "Application")
     {
         try
         {
-            // Create source if it doesn't exist
+            // Ensure the event source exists
             if (!EventLog.SourceExists(source))
             {
-                EventLog.CreateEventSource(source, logName);
-                Console.WriteLine($"Event source '{source}' created. Please rerun the application to write the log entry.");
-                return;
+                try
+                {
+                    EventLog.CreateEventSource(source, logName);
+                    // Source creation requires a restart to take effect
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    // Another process may have created the source
+                    if (!EventLog.SourceExists(source))
+                        throw new InvalidOperationException($"Failed to create event source '{source}'.", ex);
+                }
             }
 
-            // Write the log entry
-            EventLog.WriteEntry(source, message, type);
-            Console.WriteLine("Event written successfully.");
+            using (var eventLog = new EventLog(logName) { Source = source })
+            {
+                eventLog.WriteEntry(message, type);
+            }
+
+            return true;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            Console.WriteLine($"Failed to write to event log: {ex.Message}");
+            // Optionally, log to a fallback mechanism here
+            return false;
         }
     }
 }

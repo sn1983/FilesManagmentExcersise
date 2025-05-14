@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLogger", "EventLogger\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceInstallerApp", "ServiceInstallerApp\ServiceInstallerApp.csproj", "{B782B80C-8290-4737-BA4D-791B43F1B5DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonHelper", "JsonHelper\JsonHelper.csproj", "{3DDFD339-2CC9-47FE-89A1-E0268CCA9618}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B782B80C-8290-4737-BA4D-791B43F1B5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B782B80C-8290-4737-BA4D-791B43F1B5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B782B80C-8290-4737-BA4D-791B43F1B5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DDFD339-2CC9-47FE-89A1-E0268CCA9618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DDFD339-2CC9-47FE-89A1-E0268CCA9618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DDFD339-2CC9-47FE-89A1-E0268CCA9618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DDFD339-2CC9-47FE-89A1-E0268CCA9618}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

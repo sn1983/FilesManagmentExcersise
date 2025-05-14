@@ -14,9 +14,15 @@ namespace TX
         public ProjectInstaller()
         {
             InitializeComponent();
+           
         }
 
-        private void TXserviceProcessInstaller_AfterInstall(object sender, InstallEventArgs e)
+        private void serviceInstaller1_AfterInstall(object sender, InstallEventArgs e)
+        {
+
+        }
+
+        private void serviceProcessInstaller1_AfterInstall(object sender, InstallEventArgs e)
         {
 
         }

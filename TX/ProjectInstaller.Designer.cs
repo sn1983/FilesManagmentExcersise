@@ -1,4 +1,6 @@
-﻿namespace TX
+﻿using System.ServiceProcess;
+
+namespace TX
 {
     partial class ProjectInstaller
     {
@@ -28,29 +30,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.serviceInstaller = new System.ServiceProcess.ServiceInstaller();
-            this.TXserviceProcessInstaller = new System.ServiceProcess.ServiceProcessInstaller();
+            this.serviceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
+            this.serviceInstaller1 = new System.ServiceProcess.ServiceInstaller();
+            this.serviceProcessInstaller1.Account = ServiceAccount.LocalSystem;
             // 
-            // serviceInstaller
+            // serviceProcessInstaller1
             // 
-            this.serviceInstaller.ServiceName = "T(x)_Service";
+            this.serviceProcessInstaller1.Password = null;
+            this.serviceProcessInstaller1.Username = null;
+            this.serviceProcessInstaller1.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.serviceProcessInstaller1_AfterInstall);
             // 
-            // TXserviceProcessInstaller
+            // serviceInstaller1
             // 
-            this.TXserviceProcessInstaller.Password = null;
-            this.TXserviceProcessInstaller.Username = null;
-            this.TXserviceProcessInstaller.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.TXserviceProcessInstaller_AfterInstall);
+            this.serviceInstaller1.DisplayName = "T(X) Service ";
+            this.serviceInstaller1.ServiceName = "T(x)_Service";
+            this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            this.serviceInstaller1.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.serviceInstaller1_AfterInstall);
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
-            this.serviceInstaller,
-            this.TXserviceProcessInstaller});
+            this.serviceProcessInstaller1,
+            this.serviceInstaller1});
 
         }
 
         #endregion
-        private System.ServiceProcess.ServiceInstaller serviceInstaller;
-        private System.ServiceProcess.ServiceProcessInstaller TXserviceProcessInstaller;
+
+        private System.ServiceProcess.ServiceProcessInstaller serviceProcessInstaller1;
+        private System.ServiceProcess.ServiceInstaller serviceInstaller1;
     }
 }

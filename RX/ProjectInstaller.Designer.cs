@@ -1,4 +1,6 @@
-﻿namespace RX
+﻿using System.ServiceProcess;
+
+namespace RX
 {
     partial class ProjectInstaller
     {
@@ -33,12 +35,14 @@
             // 
             // serviceProcessInstaller1
             // 
+            this.serviceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
             this.serviceProcessInstaller1.Password = null;
             this.serviceProcessInstaller1.Username = null;
             // 
             // RXserviceInstaller
             // 
-            this.RXserviceInstaller.ServiceName = "Service1";
+            this.RXserviceInstaller.DisplayName = "R(X)_Service";
+            this.RXserviceInstaller.ServiceName = "R(X)_Service";
             // 
             // ProjectInstaller
             // 
