@@ -57,11 +57,11 @@ namespace ServiceInstallerApp
                 string serviceName = GetServiceNameFromExecutable(servicePath); // implement this
 
                 // Start the service
-                using (ServiceController sc = new ServiceController(serviceName))
-                {
-                    sc.Start();
-                    sc.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromSeconds(10));
-                }
+                //using (ServiceController sc = new ServiceController(serviceName))
+                //{
+                //    sc.Start();
+                //    sc.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromSeconds(10));
+                //}
 
                 MessageBox.Show("Service installed successfully.");
             }

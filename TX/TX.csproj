@@ -140,9 +140,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClassHelpers\ClassHelpers.csproj">
+      <Project>{69d807b7-38e0-48d9-a99e-63fed214b72c}</Project>
+      <Name>ClassHelpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EventLogger\EventLogger.csproj">
       <Project>{717eb6a6-14a1-4cb6-9651-637e6063774c}</Project>
       <Name>EventLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JsonHelper\JsonHelper.csproj">
+      <Project>{3ddfd339-2cc9-47fe-89a1-e0268cca9618}</Project>
+      <Name>JsonHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -51,7 +51,7 @@ namespace JsonHelper
             catch (Exception ex)
             {
                 Console.WriteLine($"Error loading JSON from file: {ex.Message}");
-                throw;
+                return default;
             }
         }
     }

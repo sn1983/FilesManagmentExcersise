@@ -1,0 +1,38 @@
+﻿<Window x:Class="TransferSettingsUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TransferSettingsUI"
+        mc:Ignorable="d"
+        Title="TX Settings" Height="200" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,5">
+            <Label Content="Source Folder:" Width="120"/>
+            <TextBox Name="txtSource" Width="180"/>
+            <Button Content="Browse..." Width="60" Click="BtnBrowseSource_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,5">
+            <Label Content="Destination Folder:" Width="120"/>
+            <TextBox Name="txtDestination" Width="180"/>
+            <Button Content="Browse..." Width="60" Click="BtnBrowseDestination_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="0,5">
+            <CheckBox Name="chkSysLog" Content="Enable SysLog"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="0,10" HorizontalAlignment="Right">
+            <Button Name="btnLoad" Content="Load" Width="75" Margin="5" Click="BtnLoad_Click"/>
+            <Button Name="btnSave" Content="Save" Width="75" Margin="5" Click="BtnSave_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

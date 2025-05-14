@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
+using ClassHelpers;
 using Serilog;
 
 namespace TX
@@ -19,21 +20,35 @@ namespace TX
     public partial class TxService : ServiceBase
     {
 
-        public string Folder { get; set; }
-        public string DestinationFolder { get; set; }
+
+        TransferSettings transferSettings;
         public TxService()
         {
             InitializeComponent();
             Log.Information("Serilog is working!");
 
             //TODO: Read Thoes Values from DB somehow
-            if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["SourceFolder"]))
-                Folder = ConfigurationManager.AppSettings["SourceFolder"];
 
-            if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["DestinationFolder"]))
-                DestinationFolder = ConfigurationManager.AppSettings["DestinationFolder"];
+            string TransferSettingsPath = string.Empty;
+            if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["TransferSettingsPath"]))
+                TransferSettingsPath = ConfigurationManager.AppSettings["TransferSettingsPath"];
+           
+            transferSettings = JsonHelper.JsonHelper.LoadFromFile<TransferSettings>(TransferSettingsPath);
+            if (transferSettings == null)
+            {
+                //case file is empty or not exists we initalize from appConfig
+                transferSettings = new TransferSettings();
+                if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["SourceFolder"]))
+                    transferSettings.SourceFolder = ConfigurationManager.AppSettings["SourceFolder"];
 
-            LocalFileTransfer fr = new LocalFileTransfer(Folder, DestinationFolder,ServiceName);
+                if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["DestinationFolder"]))
+                    transferSettings.DestinationFolder = ConfigurationManager.AppSettings["DestinationFolder"];
+                //TODO: create folders if not exists
+                transferSettings.SysLog = true;
+                JsonHelper.JsonHelper.SaveToFile<TransferSettings>(TransferSettingsPath, transferSettings);
+            }
+           
+            LocalFileTransfer fr = new LocalFileTransfer(transferSettings.SourceFolder, transferSettings.DestinationFolder, ServiceName);
             fr.StartWatching();
         }
 
@@ -42,16 +57,18 @@ namespace TX
         protected override void OnStart(string[] args)
         {
             Log.Information("Service OnStart()");
+            if(transferSettings.SysLog)
            EventLogger.WriteToEventLog(this.ServiceName, "Service OnStart()", EventLogEntryType.Information);
-            FlagCreator fc = new FlagCreator(Folder, ServiceName);
+            FlagCreator fc = new FlagCreator(transferSettings.SourceFolder, ServiceName);
             fc.CreateFlagFile();
         }
 
         public void DebugRun()
         {
             Log.Information("DebugRun()");
-            EventLogger.WriteToEventLog(this.ServiceName, "Service DebugRun()", EventLogEntryType.Information);
-            FlagCreator fc = new FlagCreator(Folder, ServiceName);
+            if (transferSettings.SysLog)
+                EventLogger.WriteToEventLog(this.ServiceName, "Service DebugRun()", EventLogEntryType.Information);
+            FlagCreator fc = new FlagCreator(transferSettings.SourceFolder, ServiceName);
             fc.CreateFlagFile();
             Thread.Sleep(Timeout.Infinite);
 

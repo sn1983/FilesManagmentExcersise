@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceInstallerApp", "Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonHelper", "JsonHelper\JsonHelper.csproj", "{3DDFD339-2CC9-47FE-89A1-E0268CCA9618}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransferSettingsUI", "TransferSettingsUI\TransferSettingsUI.csproj", "{4DAE9041-F7C6-489A-B799-31C28F18751C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassHelpers", "ClassHelpers\ClassHelpers.csproj", "{69D807B7-38E0-48D9-A99E-63FED214B72C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{3DDFD339-2CC9-47FE-89A1-E0268CCA9618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DDFD339-2CC9-47FE-89A1-E0268CCA9618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DDFD339-2CC9-47FE-89A1-E0268CCA9618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DAE9041-F7C6-489A-B799-31C28F18751C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DAE9041-F7C6-489A-B799-31C28F18751C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DAE9041-F7C6-489A-B799-31C28F18751C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DAE9041-F7C6-489A-B799-31C28F18751C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69D807B7-38E0-48D9-A99E-63FED214B72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69D807B7-38E0-48D9-A99E-63FED214B72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69D807B7-38E0-48D9-A99E-63FED214B72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69D807B7-38E0-48D9-A99E-63FED214B72C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
