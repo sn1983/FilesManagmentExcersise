@@ -15,23 +15,13 @@ namespace RX
         private FileSystemWatcher watcher;
         private string ServiceName { get; }
         private string Source { get; }
+        private MailSettings MailSettings;
 
-        MailSettings MailSettings { get; set; }
-        public FileProcessor(string ServiceName,string Source) {
+
+        public FileProcessor(string ServiceName,string Source, MailSettings MailSettings) {
         this.ServiceName = ServiceName;
-            this.Source = Source;
-
-            //TBD: getting this data from external source
-            MailSettings = new MailSettings()
-            {
-                SmtpServer = "smtp.gmail.com",
-                Port = 587,
-                UseSsl = true,
-                SenderEmail = "sn1983@gmail.com",
-                SenderName = "R(X) Service",
-                Username = "sn1983@gmail.com",
-                Password = "dmff uste svoe wxkh"
-            };
+            this.Source = Source;  
+            this.MailSettings = MailSettings;
         }
 
         public void Handle(string sourcePath, string fileName)

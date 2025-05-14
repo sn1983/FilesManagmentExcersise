@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransferSettingsUI", "Trans
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassHelpers", "ClassHelpers\ClassHelpers.csproj", "{69D807B7-38E0-48D9-A99E-63FED214B72C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RxUI", "RxUI\RxUI.csproj", "{357C2AAB-748B-447A-AD0E-23193F15F333}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services UI", "Services UI", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,9 +55,18 @@ Global
 		{69D807B7-38E0-48D9-A99E-63FED214B72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69D807B7-38E0-48D9-A99E-63FED214B72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69D807B7-38E0-48D9-A99E-63FED214B72C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357C2AAB-748B-447A-AD0E-23193F15F333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357C2AAB-748B-447A-AD0E-23193F15F333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357C2AAB-748B-447A-AD0E-23193F15F333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357C2AAB-748B-447A-AD0E-23193F15F333}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B782B80C-8290-4737-BA4D-791B43F1B5DB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{4DAE9041-F7C6-489A-B799-31C28F18751C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{357C2AAB-748B-447A-AD0E-23193F15F333} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {465071F9-B5A5-4828-92CC-C3B08265DD1B}

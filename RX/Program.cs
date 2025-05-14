@@ -15,15 +15,7 @@ namespace RX
         /// </summary>
         static void Main()
         {
-            string Folder = "logs";
-            if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["logFolder"]))
-                Folder = ConfigurationManager.AppSettings["logFolder"];
-
-            Log.Logger = new LoggerConfiguration()
-             .MinimumLevel.Debug()
-             .WriteTo.Console()
-             .WriteTo.File($"{Folder}/Rxlog.txt", rollingInterval: RollingInterval.Day)
-             .CreateLogger();
+            
 
             if (Environment.UserInteractive)
             {
