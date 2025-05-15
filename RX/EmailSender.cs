@@ -10,7 +10,7 @@ namespace RX
 {
     public static class EmailSender
     {
-        public static void SendEmail(MailSettings settings, string to, string subject, string body)
+        public static void SendEmail(MailSettings settings, string subject, string body)
         {
             using (var client = new SmtpClient(settings.SmtpServer, settings.Port))
             {
@@ -22,7 +22,7 @@ namespace RX
                 using (var message = new MailMessage())
                 {
                     message.From = new MailAddress(settings.SenderEmail, settings.SenderName);
-                    message.To.Add(to);
+                    message.To.Add(settings.RecpientEmail);
                     message.Subject = subject;
                     message.Body = body;
                     message.IsBodyHtml = true;

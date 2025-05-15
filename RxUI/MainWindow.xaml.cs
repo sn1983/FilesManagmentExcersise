@@ -55,6 +55,7 @@ namespace RxUI
                 txtUsername.Text = rxSettings.Username;
                 txtPassword.Password = rxSettings.Password;
                 txtLogFolder.Text = rxSettings.logFolder;
+                txtRecpientEmail.Text = rxSettings.RecpientEmail;
             }
             else
             {
@@ -68,6 +69,7 @@ namespace RxUI
                 txtUsername.Text = string.Empty;
                 txtPassword.Password = string.Empty;
                 txtLogFolder.Text = string.Empty;
+                txtRecpientEmail.Text = string.Empty;
                 JsonHelper.JsonHelper.SaveToFile<RxSettings>(rxSettingsPath, rxSettings);
             }
         }
@@ -89,6 +91,12 @@ namespace RxUI
                 errors.Add("Sender Email is required.");
             else if (!txtSenderEmail.Text.Contains("@") || !txtSenderEmail.Text.Contains("."))
                 errors.Add("Sender Email is not a valid email address.");
+
+            if (string.IsNullOrWhiteSpace(txtRecpientEmail.Text))
+                errors.Add("Recpient Email is required.");
+            else if (!txtRecpientEmail.Text.Contains("@") || !txtRecpientEmail.Text.Contains("."))
+                errors.Add("Recpient Email is not a valid email address.");
+
 
             if (string.IsNullOrWhiteSpace(txtUsername.Text))
                 errors.Add("Username is required.");
@@ -116,7 +124,7 @@ namespace RxUI
                 rxSettings.Username = txtUsername.Text;
                 rxSettings.Password = txtPassword.Password;
                 rxSettings.logFolder = txtLogFolder.Text;
-
+                rxSettings.RecpientEmail = txtRecpientEmail.Text;
                 JsonHelper.JsonHelper.SaveToFile<RxSettings>(rxSettingsPath, rxSettings);
                 System.Windows.MessageBox.Show("Settings saved.");
             }
@@ -143,5 +151,17 @@ namespace RxUI
                 }
             }
         }
+        private async void BtnPeekPassword_Click(object sender, RoutedEventArgs e)
+        {
+            txtPasswordPeek.Text = txtPassword.Password;
+            txtPasswordPeek.Visibility = Visibility.Visible;
+            txtPassword.Visibility = Visibility.Collapsed;
+
+            await Task.Delay(1500); // show password for 1.5 seconds
+
+            txtPasswordPeek.Visibility = Visibility.Collapsed;
+            txtPassword.Visibility = Visibility.Visible;
+        }
+
     }
 }

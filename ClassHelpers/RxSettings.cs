@@ -8,6 +8,7 @@ namespace ClassHelpers
         public int Port { get; set; }
         public bool UseSsl { get; set; }
         public string SenderEmail { get; set; }
+        public string RecpientEmail { get; set; }   
         public string SenderName { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
@@ -24,7 +25,8 @@ namespace ClassHelpers
             string senderEmail,
             string senderName,
             string username,
-            string password)
+            string password,
+            string recpientEmail)
         {
             DestinationFolder = destinationFolder;
             SysLog = sysLog;
@@ -35,6 +37,8 @@ namespace ClassHelpers
             SenderName = senderName;
             Username = username;
             Password = password;
+            RecpientEmail = recpientEmail;
+
         }
     }
 }

@@ -27,15 +27,20 @@
 
             <Label Content="Sender Email:"/>
             <TextBox x:Name="txtSenderEmail"/>
-
+            <Label Content="Recpient Email:"/>
+            <TextBox x:Name="txtRecpientEmail"/>
             <Label Content="Sender Name:"/>
             <TextBox x:Name="txtSenderName"/>
-
+            
             <Label Content="Username:"/>
             <TextBox x:Name="txtUsername"/>
 
             <Label Content="Password:"/>
-            <PasswordBox x:Name="txtPassword"/>
+            <StackPanel Orientation="Horizontal">
+                <PasswordBox x:Name="txtPassword" Width="250" />
+                <TextBox x:Name="txtPasswordPeek" Width="250" Visibility="Collapsed" IsReadOnly="True" />
+                <Button Content="👁" Width="30" Click="BtnPeekPassword_Click" Margin="5,0,0,0"/>
+            </StackPanel>
 
             <Label Content="Log Folder:"/>
             <StackPanel Orientation="Horizontal">

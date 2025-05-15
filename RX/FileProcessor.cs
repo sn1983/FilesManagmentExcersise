@@ -34,7 +34,7 @@ namespace RX
                 WaitUntilFileIsUnlocked(sourcePath);//waiting file will be available for delete
                 File.Delete(sourcePath);
 
-                EmailSender.SendEmail(MailSettings, "sn1983@gmail.com", "Flag Delete", $"Flag file \"{sourcePath}\" was deleted");
+                EmailSender.SendEmail(MailSettings, "Flag Delete", $"Flag file \"{sourcePath}\" was deleted");
                 Log.Information("Flag Delete", $"Flag  file \"{sourcePath}\" was deleted");
                 EventLogger.WriteToEventLog(this.ServiceName, $"Flag  file \"{sourcePath}\" was deleted", EventLogEntryType.Information);
 
