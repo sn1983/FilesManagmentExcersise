@@ -1,0 +1,21 @@
+﻿Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\ServiceInstallerApp\bin\Release\RX_installation\RX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\ServiceInstallerApp\bin\Release\RX_installation\RX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\ServiceInstallerApp\bin\Release\RX_installation\RX.exe
+Installing service R(X)_Service...
+Service R(X)_Service has been successfully installed.
+Creating EventLog source R(X)_Service in log Application...
+Committing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\ServiceInstallerApp\bin\Release\RX_installation\RX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\ServiceInstallerApp\bin\Release\RX_installation\RX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\ServiceInstallerApp\bin\Release\RX_installation\RX.exe
+Uninstalling assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\ServiceInstallerApp\bin\Release\RX_installation\RX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\ServiceInstallerApp\bin\Release\RX_installation\RX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\ServiceInstallerApp\bin\Release\RX_installation\RX.exe
+Removing EventLog source R(X)_Service.
+Service R(X)_Service is being removed from the system...
+Service R(X)_Service was successfully removed from the system.

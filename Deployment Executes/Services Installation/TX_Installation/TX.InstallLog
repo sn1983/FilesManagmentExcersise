@@ -1,0 +1,179 @@
+﻿Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Rolling back assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Rolling back assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Installing service T(x)_Service...
+Creating EventLog source T(x)_Service in log Application...
+Rolling back assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Restoring event log to previous state for source T(x)_Service.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security, State.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Installing service T(x)_Service...
+Creating EventLog source T(x)_Service in log Application...
+Rolling back assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Restoring event log to previous state for source T(x)_Service.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security, State.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Installing service T(x)_Service...
+Creating EventLog source T(x)_Service in log Application...
+Rolling back assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Restoring event log to previous state for source T(x)_Service.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security, State.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Installing service T(x)_Service...
+Service T(x)_Service has been successfully installed.
+Creating EventLog source T(x)_Service in log Application...
+Committing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Uninstalling assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Removing EventLog source T(x)_Service.
+Service T(x)_Service is being removed from the system...
+Service T(x)_Service was successfully removed from the system.
+Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Installing service T(x)_Service...
+Service T(x)_Service has been successfully installed.
+Creating EventLog source T(x)_Service in log Application...
+Committing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Uninstalling assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Removing EventLog source T(x)_Service.
+Service T(x)_Service is being removed from the system...
+Service T(x)_Service was successfully removed from the system.
+Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Installing service T(x)_Service...
+Creating EventLog source T(x)_Service in log Application...
+Rolling back assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Restoring event log to previous state for source T(x)_Service.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security, State.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Installing service T(x)_Service...
+Creating EventLog source T(x)_Service in log Application...
+Rolling back assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Restoring event log to previous state for source T(x)_Service.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security, State.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Installing service T(x)_Service...
+Creating EventLog source T(x)_Service in log Application...
+Rolling back assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Restoring event log to previous state for source T(x)_Service.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security, State.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Installing service T(x)_Service...
+Service T(x)_Service has been successfully installed.
+Creating EventLog source T(x)_Service in log Application...
+Committing assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Uninstalling assembly 'C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.InstallLog
+   assemblypath = C:\Users\sn198\source\repos\FilesManagmentExcersise\TX\bin\Release\TX.exe
+Removing EventLog source T(x)_Service.
+Service T(x)_Service is being removed from the system...
+Service T(x)_Service was successfully removed from the system.
