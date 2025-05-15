@@ -1,0 +1,13 @@
+{
+  "DestinationFolder": "C:\\Users\\sn198\\OneDrive\\\u05DE\u05E1\u05DE\u05DB\u05D9\u05DD\\Shay Project\\Destination",
+  "SysLog": true,
+  "SmtpServer": "smtp.gmail.com",
+  "Port": 587,
+  "UseSsl": true,
+  "SenderEmail": "sn1983@gmail.com",
+  "RecpientEmail": "sn1983@gmail.com",
+  "SenderName": "R(X) Service",
+  "Username": "sn1983@gmail.com",
+  "Password": "dmff uste svoe wxkh",
+  "logFolder": "C:\\Users\\sn198\\OneDrive\\\u05DE\u05E1\u05DE\u05DB\u05D9\u05DD\\Shay Project"
+}
