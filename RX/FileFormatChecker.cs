@@ -11,8 +11,21 @@ namespace RX
     using System.IO;
     using System.Text.RegularExpressions;
 
+    /// <summary>
+    /// Provides methods to check the format of files for specific patterns.
+    /// </summary>
     public static class FileFormatChecker
     {
+        /// <summary>
+        /// Determines whether the specified file matches the expected flag file format.
+        /// The file must exist and its first two lines must match the required patterns:
+        /// - Line 1: "Time Stamp: yyyyMMdd_HHmmss"
+        /// - Line 2: "Service Name: T(x)_Service"
+        /// </summary>
+        /// <param name="filePath">The path to the file to check.</param>
+        /// <returns>
+        /// True if the file exists and matches the flag file format; otherwise, false.
+        /// </returns>
         public static bool IsFileFlagFormat(string filePath)
         {
             if (!File.Exists(filePath))

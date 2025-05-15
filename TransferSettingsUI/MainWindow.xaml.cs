@@ -18,21 +18,38 @@ using ClassHelpers;
 namespace TransferSettingsUI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow.xaml.
+    /// Provides a UI for editing and saving TransferSettings, including validation and folder browsing.
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        /// <summary>
+        /// The current TransferSettings instance being edited.
+        /// </summary>
         TransferSettings transferSettings;
+
+        /// <summary>
+        /// The path to the TransferSettings JSON file.
+        /// </summary>
         string TransferSettingsPath;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainWindow"/> class.
+        /// Loads settings on startup.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
             BtnLoad_Click(null, null);
         }
+
+        /// <summary>
+        /// Loads TransferSettings from file and populates the UI fields.
+        /// </summary>
+        /// <param name="sender">The event sender.</param>
+        /// <param name="e">The event arguments.</param>
         private void BtnLoad_Click(object sender, RoutedEventArgs e)
         {
-            // string TransferSettingsPath = "settings.json";
             TransferSettingsPath = string.Empty;
             if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["TransferSettingsPath"]))
                 TransferSettingsPath = ConfigurationManager.AppSettings["TransferSettingsPath"];
@@ -41,12 +58,11 @@ namespace TransferSettingsUI
 
             if (transferSettings != null)
             {
-
                 txtSource.Text = transferSettings.SourceFolder;
                 txtDestination.Text = transferSettings.DestinationFolder;
                 chkSysLog.IsChecked = transferSettings.SysLog;
             }
-            else
+            else //log file was not found
             {
                 txtSource.Text = string.Empty;
                 txtDestination.Text = string.Empty;
@@ -54,6 +70,13 @@ namespace TransferSettingsUI
                 JsonHelper.JsonHelper.SaveToFile<TransferSettings>(TransferSettingsPath, transferSettings);
             }
         }
+
+        /// <summary>
+        /// Handles the Browse button click event for the source folder.
+        /// Opens a folder browser dialog and sets the selected path.
+        /// </summary>
+        /// <param name="sender">The event sender.</param>
+        /// <param name="e">The event arguments.</param>
         private void BtnBrowseSource_Click(object sender, RoutedEventArgs e)
         {
             using (var dialog = new FolderBrowserDialog())
@@ -65,6 +88,12 @@ namespace TransferSettingsUI
             }
         }
 
+        /// <summary>
+        /// Handles the Browse button click event for the destination folder.
+        /// Opens a folder browser dialog and sets the selected path.
+        /// </summary>
+        /// <param name="sender">The event sender.</param>
+        /// <param name="e">The event arguments.</param>
         private void BtnBrowseDestination_Click(object sender, RoutedEventArgs e)
         {
             using (var dialog = new FolderBrowserDialog())
@@ -75,12 +104,16 @@ namespace TransferSettingsUI
                 }
             }
         }
+
+        /// <summary>
+        /// Handles the Save button click event. Validates and saves the settings to file.
+        /// </summary>
+        /// <param name="sender">The event sender.</param>
+        /// <param name="e">The event arguments.</param>
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
-
                 if (string.IsNullOrEmpty(txtSource.Text) || string.IsNullOrEmpty(txtDestination.Text))
                 {
                     System.Windows.MessageBox.Show("Please select both source and destination folders.");

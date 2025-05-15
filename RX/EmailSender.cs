@@ -8,8 +8,17 @@ using System.Threading.Tasks;
 
 namespace RX
 {
+    /// <summary>
+    /// Provides functionality to send emails using the specified mail settings.
+    /// </summary>
     public static class EmailSender
     {
+        /// <summary>
+        /// Sends an email using the provided <see cref="MailSettings"/>, subject, and body.
+        /// </summary>
+        /// <param name="settings">The mail settings containing SMTP server, credentials, and sender/recipient information.</param>
+        /// <param name="subject">The subject of the email.</param>
+        /// <param name="body">The body content of the email.</param>
         public static void SendEmail(MailSettings settings, string subject, string body)
         {
             using (var client = new SmtpClient(settings.SmtpServer, settings.Port))
@@ -18,7 +27,7 @@ namespace RX
                 client.UseDefaultCredentials = false;
                 client.Credentials = new NetworkCredential(settings.Username, settings.Password);
                 client.EnableSsl = settings.UseSsl;
-               
+
                 using (var message = new MailMessage())
                 {
                     message.From = new MailAddress(settings.SenderEmail, settings.SenderName);
@@ -31,6 +40,5 @@ namespace RX
                 }
             }
         }
-
     }
 }
